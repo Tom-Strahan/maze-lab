@@ -43,7 +43,7 @@ ALL_WALLS_MASK = sum(d.bit for d in ALL_DIRECTIONS)
 
 class Grid:
     """
-    A Rectangular Grid. Each cell stores walls as a 4 bit mask (N/E/S/W) where 1 means that a wall 
+    A Rectangular Grid. Each cell stores walls as a 4 bit mask (N/E/S/W) where 1 means that a wall
     is present.
     """
 
