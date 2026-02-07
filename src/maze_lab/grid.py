@@ -1,6 +1,6 @@
+from collections.abc import Iterator
 from dataclasses import dataclass
 from enum import IntEnum
-from typing import Iterator
 
 
 @dataclass(frozen=True, slots=True)
@@ -43,7 +43,8 @@ ALL_WALLS_MASK = sum(d.bit for d in ALL_DIRECTIONS)
 
 class Grid:
     """
-    A Rectangular Grid. Each cell stores walls as a 4 bit mask (N/E/S/W) where 1 means that a wall is present.
+    A Rectangular Grid. Each cell stores walls as a 4 bit mask (N/E/S/W) where 1 means that a wall 
+    is present.
     """
 
     __slots__ = ("width", "height", "_walls")
