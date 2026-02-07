@@ -1,0 +1,36 @@
+[project]
+name = "maze-lab"
+version = "0.1.0"
+description = "Maze generator and pathfinding visualizer"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "pygame>=2.5",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "ruff>=0.8",
+  "mypy>=1.10",
+]
+
+[project.scripts]
+maze = "maze_lab.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+disallow_any_generics = true
